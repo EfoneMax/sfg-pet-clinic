@@ -1,4 +1,4 @@
-package com.efonemax.sfgpetclinic.model;
+package efoneMax.springframework.sfgpetclinic;
 
 import lombok.Getter;
 import lombok.Setter;

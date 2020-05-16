@@ -1,8 +1,6 @@
-package com.efonemax.sfgpetclinic.model;
+package efoneMax.springframework.sfgpetclinic;
 
 import lombok.Data;
-
-import javax.persistence.Entity;
 
 @Data
 public class Person {
