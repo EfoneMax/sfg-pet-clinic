@@ -1,4 +1,4 @@
-package efoneMax.springframework.sfgpetclinic;
+package efoneMax.springframework.sfgpetclinic.model;
 
 import lombok.Data;
 
