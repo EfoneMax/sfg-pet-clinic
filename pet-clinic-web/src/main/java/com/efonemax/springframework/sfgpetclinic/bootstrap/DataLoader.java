@@ -1,11 +1,11 @@
-package com.efonemax.sfgpetclinic.bootstrap;
+package com.efonemax.springframework.sfgpetclinic.bootstrap;
 
-import efoneMax.springframework.sfgpetclinic.map.OwnerServiceMap;
-import efoneMax.springframework.sfgpetclinic.map.VetServiceMap;
-import efoneMax.springframework.sfgpetclinic.model.Owner;
-import efoneMax.springframework.sfgpetclinic.model.Vet;
-import efoneMax.springframework.sfgpetclinic.services.OwnerService;
-import efoneMax.springframework.sfgpetclinic.services.VetService;
+import com.efoneMax.springframework.sfgpetclinic.map.OwnerServiceMap;
+import com.efoneMax.springframework.sfgpetclinic.map.VetServiceMap;
+import com.efoneMax.springframework.sfgpetclinic.model.Owner;
+import com.efoneMax.springframework.sfgpetclinic.model.Vet;
+import com.efoneMax.springframework.sfgpetclinic.services.OwnerService;
+import com.efoneMax.springframework.sfgpetclinic.services.VetService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -15,8 +15,8 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
 
     public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+        this.ownerService = new OwnerServiceMap();
+        this.vetService = new VetServiceMap();
     }
 
     @Override
@@ -49,6 +49,11 @@ public class DataLoader implements CommandLineRunner {
         vet2.setId(2L);
 
         vetService.save(vet2);
+
+        System.out.println(vet1);
+        System.out.println(vet2);
+        System.out.println(owner1);
+        System.out.println(owner2);
 
 
     }

@@ -1,10 +1,12 @@
-package efoneMax.springframework.sfgpetclinic.map;
+package com.efoneMax.springframework.sfgpetclinic.map;
 
-import efoneMax.springframework.sfgpetclinic.model.Vet;
-import efoneMax.springframework.sfgpetclinic.services.VetService;
+import com.efoneMax.springframework.sfgpetclinic.model.Vet;
+import com.efoneMax.springframework.sfgpetclinic.services.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
