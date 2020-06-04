@@ -1,11 +1,9 @@
 package com.efonemax.springframework.sfgpetclinic.bootstrap;
 
-import com.efoneMax.springframework.sfgpetclinic.map.OwnerServiceMap;
-import com.efoneMax.springframework.sfgpetclinic.map.VetServiceMap;
-import com.efoneMax.springframework.sfgpetclinic.model.Owner;
-import com.efoneMax.springframework.sfgpetclinic.model.Vet;
-import com.efoneMax.springframework.sfgpetclinic.services.OwnerService;
-import com.efoneMax.springframework.sfgpetclinic.services.VetService;
+import com.efonemax.springframework.sfgpetclinic.model.Owner;
+import com.efonemax.springframework.sfgpetclinic.model.Vet;
+import com.efonemax.springframework.sfgpetclinic.services.OwnerService;
+import com.efonemax.springframework.sfgpetclinic.services.VetService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -14,9 +12,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        this.ownerService = new OwnerServiceMap();
-        this.vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
