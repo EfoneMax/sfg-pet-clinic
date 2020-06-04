@@ -1,6 +1,6 @@
-package com.efoneMax.springframework.sfgpetclinic.services;
+package com.efonemax.springframework.sfgpetclinic.services;
 
-import com.efoneMax.springframework.sfgpetclinic.model.Pet;
+import com.efonemax.springframework.sfgpetclinic.model.Pet;
 
 public interface PetService extends CrudService<Pet, Long> {
 }

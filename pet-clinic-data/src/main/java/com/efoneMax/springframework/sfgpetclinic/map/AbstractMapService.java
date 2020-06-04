@@ -1,4 +1,4 @@
-package com.efoneMax.springframework.sfgpetclinic.map;
+package com.efonemax.springframework.sfgpetclinic.map;
 
 import org.springframework.stereotype.Service;
 

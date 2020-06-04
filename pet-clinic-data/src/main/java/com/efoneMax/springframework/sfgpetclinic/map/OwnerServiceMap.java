@@ -1,7 +1,7 @@
-package com.efoneMax.springframework.sfgpetclinic.map;
+package com.efonemax.springframework.sfgpetclinic.map;
 
-import com.efoneMax.springframework.sfgpetclinic.model.Owner;
-import com.efoneMax.springframework.sfgpetclinic.services.OwnerService;
+import com.efonemax.springframework.sfgpetclinic.model.Owner;
+import com.efonemax.springframework.sfgpetclinic.services.OwnerService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;

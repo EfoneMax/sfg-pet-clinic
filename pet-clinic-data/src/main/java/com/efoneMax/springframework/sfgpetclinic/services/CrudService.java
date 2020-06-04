@@ -1,4 +1,4 @@
-package com.efoneMax.springframework.sfgpetclinic.services;
+package com.efonemax.springframework.sfgpetclinic.services;
 
 import java.util.Set;
 

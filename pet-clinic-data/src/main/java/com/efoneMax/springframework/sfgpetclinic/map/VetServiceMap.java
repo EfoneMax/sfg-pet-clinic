@@ -1,7 +1,7 @@
-package com.efoneMax.springframework.sfgpetclinic.map;
+package com.efonemax.springframework.sfgpetclinic.map;
 
-import com.efoneMax.springframework.sfgpetclinic.model.Vet;
-import com.efoneMax.springframework.sfgpetclinic.services.VetService;
+import com.efonemax.springframework.sfgpetclinic.model.Vet;
+import com.efonemax.springframework.sfgpetclinic.services.VetService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
