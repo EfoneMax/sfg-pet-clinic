@@ -1,6 +1,7 @@
 package com.efonemax.springframework.sfgpetclinic.bootstrap;
 
 import com.efonemax.springframework.sfgpetclinic.model.Owner;
+import com.efonemax.springframework.sfgpetclinic.model.Pet;
 import com.efonemax.springframework.sfgpetclinic.model.PetType;
 import com.efonemax.springframework.sfgpetclinic.model.Vet;
 import com.efonemax.springframework.sfgpetclinic.services.OwnerService;
@@ -8,6 +9,8 @@ import com.efonemax.springframework.sfgpetclinic.services.PetTypeService;
 import com.efonemax.springframework.sfgpetclinic.services.VetService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
+import java.time.LocalDate;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -25,21 +28,42 @@ public class DataLoader implements CommandLineRunner {
     public void run(String... args) throws Exception {
         PetType dog = new PetType();
         dog.setName("Dog");
-        PetType saveDogPetType = petTypeService.save(dog);
+        PetType savedDogPetType = petTypeService.save(dog);
 
         PetType cat = new PetType();
         dog.setName("Cat");
-        PetType saveCatPetType = petTypeService.save(cat);
+        PetType savedCatPetType = petTypeService.save(cat);
 
         Owner owner1 = new Owner();
         owner1.setFirstname("OwnerFirstName1");
         owner1.setLastname("OwnerLastName1");
+        owner1.setAddress("Lakeshire road 5");
+        owner1.setCity("City1");
+        owner1.setTelephone("123123123");
+
+        Pet mikesPet = new Pet();
+        mikesPet.setPetType(savedDogPetType);
+        mikesPet.setOwner(owner1);
+        mikesPet.setBirthDate(LocalDate.now());
+        mikesPet.setName("Rosco");
+        owner1.getPets().add(mikesPet);
 
         ownerService.save(owner1);
 
         Owner owner2 = new Owner();
         owner2.setFirstname("OwnerFirstName2");
         owner2.setLastname("OwnerLastName2");
+        owner2.setAddress("Lakeshire road 6");
+        owner2.setCity("City2");
+        owner2.setTelephone("1231231231");
+
+        Pet fionasCat = new Pet();
+        fionasCat.setName("Just Cat");
+        fionasCat.setOwner(owner2);
+        fionasCat.setBirthDate(LocalDate.now());
+        fionasCat.setPetType(savedCatPetType);
+        owner2.getPets().add(fionasCat);
+
 
         ownerService.save(owner2);
 

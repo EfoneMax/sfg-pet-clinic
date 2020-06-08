@@ -8,5 +8,6 @@ import java.io.Serializable;
 @Getter
 @Setter
 public class BaseEntity implements Serializable {
+    private String name;
     private Long id;
 }
