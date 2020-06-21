@@ -17,10 +17,19 @@ import java.util.Set;
 @Getter
 @Setter
 @NoArgsConstructor
-@Builder
 @Entity
 @Table(name = "owners")
 public class Owner extends Person {
+
+    @Builder
+    public Owner(String firstname, String lastname, String address, String city, String telephone, Set<Pet> pets) {
+        super(firstname, lastname);
+        this.address = address;
+        this.city = city;
+        this.telephone = telephone;
+        this.pets = pets;
+    }
+
     @Column(name = "address")
     private String address;
 

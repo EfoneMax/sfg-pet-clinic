@@ -1,5 +1,6 @@
 package com.efonemax.springframework.sfgpetclinic.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,10 +20,12 @@ import java.util.Set;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 @Builder
 @Entity
 @Table(name = "pets")
 public class Pet extends BaseEntity {
+
     @Column(name = "name")
     private String name;
 
