@@ -1,9 +1,10 @@
-package com.efonemax.springframework.sfgpetclinic.services;
+package com.efonemax.springframework.sfgpetclinic.services.springdatajpa;
 
 import com.efonemax.springframework.sfgpetclinic.model.Owner;
 import com.efonemax.springframework.sfgpetclinic.repositories.OwnerRepository;
 import com.efonemax.springframework.sfgpetclinic.repositories.PetRepository;
 import com.efonemax.springframework.sfgpetclinic.repositories.PetTypeRepository;
+import com.efonemax.springframework.sfgpetclinic.services.OwnerService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
@@ -26,7 +27,7 @@ public class OwnerSDJpaService implements OwnerService {
 
     @Override
     public Owner findByLastName(String lastName) {
-        return ownerRepository.findByLastName(lastName);
+        return ownerRepository.findByLastname(lastName);
     }
 
     @Override

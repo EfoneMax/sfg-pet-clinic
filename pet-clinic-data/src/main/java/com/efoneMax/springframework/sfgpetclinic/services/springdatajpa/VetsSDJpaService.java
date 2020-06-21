@@ -1,7 +1,8 @@
-package com.efonemax.springframework.sfgpetclinic.services;
+package com.efonemax.springframework.sfgpetclinic.services.springdatajpa;
 
 import com.efonemax.springframework.sfgpetclinic.model.Vet;
 import com.efonemax.springframework.sfgpetclinic.repositories.VetRepository;
+import com.efonemax.springframework.sfgpetclinic.services.VetService;
 import com.sun.istack.Nullable;
 
 import java.util.HashSet;

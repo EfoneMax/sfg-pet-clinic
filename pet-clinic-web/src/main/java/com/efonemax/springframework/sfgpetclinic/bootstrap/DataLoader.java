@@ -5,6 +5,7 @@ import com.efonemax.springframework.sfgpetclinic.model.Pet;
 import com.efonemax.springframework.sfgpetclinic.model.PetType;
 import com.efonemax.springframework.sfgpetclinic.model.Speciality;
 import com.efonemax.springframework.sfgpetclinic.model.Vet;
+import com.efonemax.springframework.sfgpetclinic.model.Visit;
 import com.efonemax.springframework.sfgpetclinic.services.OwnerService;
 import com.efonemax.springframework.sfgpetclinic.services.PetTypeService;
 import com.efonemax.springframework.sfgpetclinic.services.SpecialtyService;
@@ -90,6 +91,11 @@ public class DataLoader implements CommandLineRunner {
 
 
         ownerService.save(owner2);
+
+        Visit visit1 = new Visit();
+        visit1.setPet(fionasCat);
+        visit1.setDate(LocalDate.now());
+        visit1.setDescription("Sneezy kitty");
 
         Vet vet1 = new Vet();
         vet1.setFirstname("VetFirstName1");

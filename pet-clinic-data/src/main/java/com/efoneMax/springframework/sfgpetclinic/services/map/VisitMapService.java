@@ -1,10 +1,12 @@
-package com.efonemax.springframework.sfgpetclinic.map;
+package com.efonemax.springframework.sfgpetclinic.services.map;
 
 import com.efonemax.springframework.sfgpetclinic.model.Visit;
 import com.efonemax.springframework.sfgpetclinic.services.VisitService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class VisitMapService extends AbstractMapService<Visit, Long> implements VisitService {
     @Override
     public Set<Visit> findAll() {

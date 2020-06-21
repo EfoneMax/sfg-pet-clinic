@@ -1,4 +1,4 @@
-package com.efonemax.springframework.sfgpetclinic.map;
+package com.efonemax.springframework.sfgpetclinic.services.map;
 
 import com.efonemax.springframework.sfgpetclinic.model.PetType;
 import com.efonemax.springframework.sfgpetclinic.services.PetTypeService;

@@ -1,14 +1,12 @@
-package com.efonemax.springframework.sfgpetclinic.map;
+package com.efonemax.springframework.sfgpetclinic.services.map;
 
 import com.efonemax.springframework.sfgpetclinic.model.BaseEntity;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
-import java.util.NoSuchElementException;
 import java.util.Set;
 
 @Service
