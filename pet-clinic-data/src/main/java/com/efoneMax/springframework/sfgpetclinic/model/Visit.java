@@ -1,6 +1,8 @@
 package com.efonemax.springframework.sfgpetclinic.model;
 
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Column;
@@ -12,6 +14,8 @@ import java.time.LocalDate;
 
 @Getter
 @Setter
+@NoArgsConstructor
+@Builder
 @Entity
 @Table(name = "visits")
 public class Visit extends BaseEntity {

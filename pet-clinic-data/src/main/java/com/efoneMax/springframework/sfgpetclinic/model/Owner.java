@@ -1,6 +1,8 @@
 package com.efonemax.springframework.sfgpetclinic.model;
 
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.CascadeType;
@@ -14,6 +16,8 @@ import java.util.Set;
 
 @Getter
 @Setter
+@NoArgsConstructor
+@Builder
 @Entity
 @Table(name = "owners")
 public class Owner extends Person {
