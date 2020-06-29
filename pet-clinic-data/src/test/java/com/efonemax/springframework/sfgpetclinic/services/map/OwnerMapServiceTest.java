@@ -27,6 +27,7 @@ class OwnerMapServiceTest {
     private static final long ownerId = 1L;
 
     private static final String lastName = "Smith";
+    private Owner owner;
 
     @BeforeEach
     void setUp() {
@@ -39,7 +40,7 @@ class OwnerMapServiceTest {
         Pet petPacMan = Pet.builder()
                 .petType(petTypePacMan)
                 .build();
-        Owner owner = Owner.builder()
+        owner = Owner.builder()
                 .id(ownerId)
                 .pets(Stream.of(petPacMan).collect(Collectors.toCollection(HashSet::new)))
                 .lastName(lastName)
@@ -80,7 +81,7 @@ class OwnerMapServiceTest {
 
     @Test
     void delete() {
-        ownerMapService.delete(Owner.builder().id(ownerId).build());
+        ownerMapService.delete(owner);
         assertEquals(0, ownerMapService.findAll().size());
     }
 
