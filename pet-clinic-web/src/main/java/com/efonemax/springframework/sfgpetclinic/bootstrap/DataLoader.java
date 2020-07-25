@@ -14,6 +14,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -98,6 +100,10 @@ public class DataLoader implements CommandLineRunner {
         visit1.setDescription("Sneezy kitty");
 
         Vet vet1 = new Vet();
+        Set<Speciality> vet1specialitySet = new HashSet<>();
+        vet1specialitySet.add(radiology);
+        vet1specialitySet.add(dentistry);
+        vet1.setSpecialities(vet1specialitySet);
         vet1.setFirstName("VetFirstName1");
         vet1.setLastName("VetLastName1");
 
