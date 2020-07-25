@@ -1,9 +1,16 @@
 package com.efonemax.springframework.sfgpetclinic.controllers;
 
+import com.efonemax.springframework.sfgpetclinic.model.Vet;
 import com.efonemax.springframework.sfgpetclinic.services.VetService;
+import com.efonemax.springframework.sfgpetclinic.services.springdatajpa.VetsSDJpaService;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.Set;
 
 @Controller
 public class VetController {
@@ -17,5 +24,10 @@ public class VetController {
     public String listVets(Model model) {
         model.addAttribute("vets", vetService.findAll());
         return "vets/index";
+    }
+
+    @GetMapping("/api/vets")
+    public @ResponseBody Set<Vet> getVetsJSON() {
+        return vetService.findAll();
     }
 }
